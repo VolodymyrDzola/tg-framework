@@ -16,7 +16,7 @@
 
 ```bash
 # Клонуйте репозиторій
-[git clone https://github.com/ваш-нік/ultra-tg-framework.git](https://github.com/VolodymyrDzola/tg-framework.git)
+git clone https://github.com/ваш-нік/ultra-tg-framework.git
 cd tg-framework
 npm install
 
