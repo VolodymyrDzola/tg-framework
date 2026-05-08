@@ -1,0 +1,14 @@
+# Специфічні файли, які ти просив не чіпати
+generate-types.js
+.clasp.json
+
+# Стандартні папки та файли
+node_modules/
+dist/
+build/
+.env
+*.log
+
+# Тимчасові файли ОС
+.DS_Store
+Thumbs.db
