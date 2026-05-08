@@ -2,7 +2,7 @@
 
 Сучасний, легкий та повністю типізований фреймворк для створення Telegram-ботів. Побудований з акцентом на швидкість, гнучкість та підтримку найновіших функцій API.
 
-[![Documentation](https://img.shields.io/badge/docs-TypeDoc-blue.svg)](https://твій-нік.github.io/tg-framework/)
+[![Documentation](https://img.shields.io/badge/docs-TypeDoc-blue.svg)](https://volodymyrdzola.github.io/tg-framework/)
 
 ## ✨ Особливості
 
