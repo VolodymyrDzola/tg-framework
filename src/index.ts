@@ -1,3 +1,7 @@
+/**
+ * @link https://volodymyrdzola.github.io/tg-framework/
+ */
+
 // CORE
 export * from './core/bot';
 export * from './core/composer';
