@@ -20,18 +20,17 @@ export interface SessionOptions<S extends SessionData, C extends Context> {
   getSessionKey?: (ctx: C) => string | undefined;
 
   /** Empty session initialization function (if data doesn't exist yet) */
-  initial?: () => S;
+  initial: () => S;
 }
 
 /**
  * Middleware for adding sessions to the context.
  */
 export function SessionManager<S extends SessionData, C extends Context>(
-  options?: SessionOptions<S, C>
+  options: SessionOptions<S, C>
 ): Middleware<C> {
-  const storage = options?.storage || new MemoryStorage<S>();
-
-  const getSessionKey = options?.getSessionKey || ((ctx: C) => {
+  const storage = options.storage || new MemoryStorage<S>();
+  const getSessionKey = options.getSessionKey || ((ctx: C) => {
     const chatId = ctx.chatId;
     const fromId = ctx.from?.id;
     if (chatId == null || fromId == null) {
@@ -52,7 +51,7 @@ export function SessionManager<S extends SessionData, C extends Context>(
     let sessionData: S | undefined = await Promise.resolve(storage.get(key));
     // 2. If data is missing, call initial() or create an empty object
     if (sessionData == null) {
-      sessionData = options?.initial ? options.initial() : ({} as S);
+      sessionData = options.initial();
     }
 
     // 3. Put the session into the context
