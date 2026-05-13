@@ -25,7 +25,7 @@ export interface SessionOptions<S extends SessionData> {
 /**
  * Middleware for adding sessions to the context.
  */
-export function SessionManager<S extends SessionData>(
+export function sessionManager<S extends SessionData>(
   options: SessionOptions<S>
 ) {
   const storage = options.storage || new MemoryStorage<S>();

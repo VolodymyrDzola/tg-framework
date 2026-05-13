@@ -1,13 +1,17 @@
 {
-  "name": "ultra-telegram-framework",
+  "name": "ultra-tg-framework",
   "version": "1.0.4",
   "description": "Telegram framework for Google Apps Script and Node.js - Bot API 10.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "files": [
-    "dist"
+    "dist",
+    "bin"
   ],
+  "bin": {
+    "utf-build": "bin/utf-build.js"
+  },
   "scripts": {
     "build:npm": "tsc",
     "build:gas": "node build.js",

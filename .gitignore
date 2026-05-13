@@ -10,6 +10,9 @@ build/
 .env
 *.log
 
+# WiKi
+WiKi/
+
 # npm pack archives
 *.tgz
 

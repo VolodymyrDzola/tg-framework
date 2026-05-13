@@ -1,4 +1,4 @@
-import { TelegramBot, SessionManager, WebApiClient, MemoryStorage, InlineMenu, InlineKeyboard, SceneContext } from '../src/index';
+import { TelegramBot, sessionManager, WebApiClient, MemoryStorage, InlineMenu, InlineKeyboard, SceneContext } from '../src/index';
 
 const bot = new TelegramBot(new WebApiClient('TOKEN'));
 

@@ -2,6 +2,18 @@
 import { BaseTelegramClient, TelegramErrorResponse, TelegramApiResponse } from '../core/base-api';
 
 export class GasApiClient extends BaseTelegramClient {
+  constructor(token?: string) {
+    const resolvedToken = token || (typeof PropertiesService !== 'undefined' ? PropertiesService.getScriptProperties().getProperty('BOT_TOKEN') : null);
+
+    if (!resolvedToken) {
+      throw new Error(
+        "UTF Error: BOT_TOKEN not found! " +
+        "Please add it to 'Script Properties' in your Google Apps Script project."
+      );
+    }
+
+    super(resolvedToken);
+  }
   /**
    * Sends a request to the Telegram API.
    * @param method - method name

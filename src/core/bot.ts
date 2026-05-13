@@ -13,11 +13,25 @@ export type EditMessageIds =
   | { chat_id: number | string; message_id: number }
   | string;
 
+// Global registry for CLI build tools (utf-build)
+export let _activeBotInstance: any = null;
+
 // 1. Pass generic C to Composer
 export class TelegramBot<C extends Context = Context> extends Composer<C> {
+  private client: BaseTelegramClient;
 
-  constructor(private readonly client: BaseTelegramClient) {
+  constructor(client: BaseTelegramClient) {
     super();
+    this.client = client;
+    _activeBotInstance = this;
+  }
+
+  /**
+   * Internal method used by the utf-build CLI to dynamically inject
+   * the GAS API client at runtime. Do not use manually.
+   */
+  public _setClient(newClient: BaseTelegramClient): void {
+    this.client = newClient;
   }
 
   /**
