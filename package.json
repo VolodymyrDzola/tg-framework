@@ -1,13 +1,15 @@
 {
   "name": "ultra-telegram-framework",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "author": "Volodymyr Dzola",
   "description": "Telegram framework for Google Apps Script and Node.js - Bot API 10.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/VolodymyrDzola/ultra-telegram-framework.git"
   },
-  "bugs": "https://github.com/VolodymyrDzola/ultra-telegram-framework/issues",
+  "bugs": {
+    "url": "https://github.com/VolodymyrDzola/ultra-telegram-framework/issues"
+  },
   "homepage": "https://github.com/VolodymyrDzola/ultra-telegram-framework#readme",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
