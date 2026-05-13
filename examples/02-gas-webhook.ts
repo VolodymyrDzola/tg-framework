@@ -2,7 +2,7 @@
  * Google Apps Script Example
  * 
  * To deploy this bot to GAS:
- * 1. Install the framework: npm install ultra-tg-framework
+ * 1. Install the framework: npm install ultra-telegram-framework
  * 2. Run the build command: npx utf-build examples/02-gas-webhook.ts
  * 3. Push to GAS: clasp push
  */

@@ -1,5 +1,5 @@
 {
-  "name": "ultra-tg-framework",
+  "name": "ultra-telegram-framework",
   "version": "1.1.0",
   "description": "Telegram framework for Google Apps Script and Node.js - Bot API 10.0",
   "main": "dist/index.js",
@@ -19,7 +19,7 @@
     "pull": "clasp pull",
     "create": "clasp create",
     "login": "clasp login",
-    "docs": "typedoc --entryPointStrategy expand ./src",
+    "docs": "typedoc --entryPointStrategy expand ./src --exclude \"**/*.test.ts\"",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "prepublishOnly": "npm run build:npm"
   },

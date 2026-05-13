@@ -18,7 +18,7 @@ if (!existsSync(resolvedEntry)) {
 }
 
 const wrapperCode = `
-import { _activeBotInstance, GasApiClient } from 'ultra-tg-framework';
+import { _activeBotInstance, GasApiClient } from 'ultra-telegram-framework';
 
 // 1. Execute the developer's code. This will instantiate TelegramBot 
 // and assign it to _activeBotInstance.
